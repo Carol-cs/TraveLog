@@ -35,7 +35,7 @@ travel journals is a great solution for me.
 - As a user, I want to be prompted with the option to save all travel journals to file when the application ends
 - As a user, I want to be prompted with the option to load all travel journals from file when the application starts
 
-## Instructions for Grader
+## Instructions for the User
 
 - You can generate the first required event by adding a new travel journal by clicking the **Add New Journal** button on 
 the main menu. However, it will not lead you to see all the journals in the journal collection. You can click 
@@ -70,51 +70,9 @@ field is empty when you trigger a search, an error message will pop up to alert 
 
 - You can return to the main menu by clicking the **Back** button at the bottom right of the browse panel.
 
-- You can locate my visual components by looking at the logo "TraveLog" on the main menu, the icons on the buttons, and 
-the icons on the popup windows for loading and saving.
-
 - You will be prompted with the option to save all travel journals to file when closing the application. You can refuse 
 to save the data by selecting **No**, and you can save the data by selecting **Yes**. You can close the popup window to
 cancel closing the application. 
 
 - You will be prompted with the option to load all travel journals from file when the application starts. You can refuse 
 to load data by selecting **No** or by closing the popup window. You can choose to load data by clicking **Yes**.
-
-## Phase 4: Task 2
-
-A representative sample of the events that occur when the program runs:
-
-Tue Aug 09 17:09:55 PDT 2022\
-Added a travel journal titled "Canada's Wonderland Tour"
-
-Tue Aug 09 17:09:55 PDT 2022\
-Added a travel journal titled "Universal Studios Japan Tour"
-
-Tue Aug 09 17:10:32 PDT 2022\
-Added a travel journal titled "Niagara Falls Tour"
-
-Tue Aug 09 17:10:38 PDT 2022\
-Removed the travel journal titled "Universal Studios Japan Tour"
-
-Tue Aug 09 17:11:02 PDT 2022\
-Removed the travel journal titled "Canada's Wonderland Tour"
-
-## Phase 4: Task 3
-
-Refactoring I want to do to improve the project design:
-
-- I want to refactor the code to reduce coupling between the `JournalWindow` and `TravelJournal` classes. I want to use 
-the `JournalCollection` class as an interface between these two classes to reduce coupling.
-
-- I want to split the `TraveLogAppGUI` class to improve the cohesion of my code. The `TraveLogAppGUI` class contains 
-many functionalities, such as writing/reading json files, GUI parts, searching, deleting and listening to most buttons. 
-I want to split this class to avoid overwhelming it.
-
-- There are some similar methods in the `JournalWindow` and `TraveLogAppGUI` classes. I want to create an abstract class
-for them to extend to reduce duplicate code.
-
-- I want to enhance the single point of control over the dimension and layout of the graphical components for easy 
-adjustment.
-
-- I want to create another exception called `DuplicateTitleException` so that when a new journal is added and the title 
-is duplicated, this exception can be thrown instead of adding an if statement to the `ui` package to handle it.
