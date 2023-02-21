@@ -76,3 +76,6 @@ cancel closing the application.
 
 - You will be prompted with the option to load all travel journals from file when the application starts. You can refuse 
 to load data by selecting **No** or by closing the popup window. You can choose to load data by clicking **Yes**.
+
+## Demo
+[TraveLog App Demo](https://vimeo.com/739195265)
